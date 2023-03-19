@@ -19,8 +19,8 @@ def index():
 
 @app.route('/bakeries')
 def bakeries():
-    # all_bakeries = Bakery.query().all()   # =>TypeError: 'Query' object is not callable
-    all_bakeries = db.session.query(Bakery).all()
+    all_bakeries = Bakery.query.all()
+    # all_bakeries = db.session.query(Bakery).all()
 
     bakeries = []
     # turn data into python dict obj
